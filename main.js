@@ -180,8 +180,8 @@ const names_n = [1000, 999, 77, 333, -3]
 
 // для остальных случаев необходимо передать колбэк - ф-цию сравнения
 
-const compareFunc=(a,b)=>{ // если a>b надо вернуть положительное число, если они равны или a<b, то отрицательное - и тогда они меняются местами - ТАК УСТРОЕН SORT
-    if (a>b) {
+const compareFunc = (a, b) => { // если a>b надо вернуть положительное число, если они равны или a<b, то отрицательное - и тогда они меняются местами - ТАК УСТРОЕН SORT
+    if (a > b) {
         return 10 // любое положительное число
     } else {
         return -10 // любое отрицательное
@@ -189,9 +189,9 @@ const compareFunc=(a,b)=>{ // если a>b надо вернуть положи�
 }
 console.log(names_n.sort(compareFunc))
 
-const names_n2 = [100, 9949, 77, 13, -3,0]
-console.log(names_n2.sort((a,b)=>a-b))
-console.log(names_n2.sort((a,b)=>b-a))
+const names_n2 = [100, 9949, 77, 13, -3, 0]
+console.log(names_n2.sort((a, b) => a - b))
+console.log(names_n2.sort((a, b) => b - a))
 
 const students = [
     {
@@ -232,8 +232,8 @@ const students = [
     },
 ];
 //пишем сами функцию сравнения
-const sortByName = (a,b)=> {
-    if (a.name.toLowerCase()>b.name.toLowerCase) {
+const sortByName = (a, b) => {
+    if (a.name.toLowerCase() > b.name.toLowerCase) {
         return 1
     } else {
         return -1
@@ -241,23 +241,29 @@ const sortByName = (a,b)=> {
 }
 //console.log(students.sort(sortByName))
 
-console.log((students.sort((a, b)=>a.name.localeCompare(b.name)))) // по строкам
+console.log((students.sort((a, b) => a.name.localeCompare(b.name)))) // по строкам
 
-console.log((students.sort((a, b)=>a.age-b.age))) // по числам
+console.log((students.sort((a, b) => a.age - b.age))) // по числам
 
 
 //bubble sort
 
-const nums = [9,5,3,7,5,-8,3,8,-4,-2,0,5]
-let j=0
-while (j<nums.length/2) {
-    for (let i = 0; i < nums.length; i++) {
+const nums = [9, 5, 3, 7, 5, -8, 3, 8, -4, -2, 0, 5]
+let j = 0
+let k = 0
+while (j < nums.length - 1) {
+    let isSorted = true
+    for (let i = 0; i < nums.length - 1 - j; i++) {
+        k=k+1
         if (nums[i] > nums[i + 1]) {
             let a = nums[i]
             nums[i] = nums[i + 1]
             nums[i + 1] = a
+            isSorted = false
         }
     }
+    if (isSorted) break
     j++
 }
 console.log(nums)
+console.log(k)
