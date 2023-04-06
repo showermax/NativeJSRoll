@@ -72,12 +72,14 @@ const movies = {
 };
 
 //1. Получить список всех фильмов жанра "Drama"
+//  console.log(Object.values(movies).filter(el=>el.genre.includes('Drama')))
 
 //2. Получить список всех фильмов, выпущенных в 1994 году.
+// console.log(Object.values(movies).filter(el=>el.year===1994))
 
 // 3. Получить список всех фильмов, режиссером которых является Christopher Nolan
-
-// 4. Дан список из 3-х объектов, необходимо из списка объектов сделать асоциативный массив. Для создания такого массива,
+// console.log(Object.values(movies).filter(el=>el.director==="Christopher Nolan"))
+//4. Дан список из 3-х объектов, необходимо из списка объектов сделать асоциативный массив. Для создания такого массива,
 // необходимо взять title в качестве ключа.
 
 const games = [
@@ -108,11 +110,21 @@ const games = [
 ];
 
 //5. Получить список названий всех фильмов.
-
+// let newArr=[]
+// for (let i = 0; i < games.length; i++) {
+//     newArr.push(games[i].title)
+// }
+// console.log(newArr)
 // 6. Получить список всех режиссеров.
 
-// 7. Получить список фильмов, вышедших в 90-х годах.
 
+// 7. Получить список фильмов, вышедших в 90-х годах.
+let array=[]
+for (const key in movies) {
+    if (movies[key].year>=1990 && movies[key].year<2000)
+        array.push(key)
+}
+console.log(array)
 // 8. Получить список фильмов, отсортированных по году выхода.
 
 // 9.Напишите функцию, которая принимает объект, состоящий из ключей и значений, и возвращает новый объект, в котором
@@ -124,7 +136,7 @@ const swapObjectKeysAndValues = (obj) => {
 }
 
 const swappedObj = swapObjectKeysAndValues(obj);
-console.log(swappedObj); // { John: 'name', '30': 'age' }
+// console.log(swappedObj); // { John: 'name', '30': 'age' }
 
 // 10. Напишите функцию, которая принимает массив объектов и возвращает новый объект, в котором ключами являются
 // значения определенного свойства объектов, а значениями являются массивы объектов, у которых это свойство имеет такое значение.
@@ -137,7 +149,7 @@ const groupObjectsByProperty =(arr, age)=>{
     //писать тут
 }
 const groupedObj = groupObjectsByProperty(arr, 'age');
-console.log(groupedObj);
+// console.log(groupedObj);
 //
 // {
 //   '25': [{ name: 'Bob', age: 25 }],
