@@ -4,8 +4,15 @@
 // repeatString("yo", 3, ", ") => "yo, yo, yo"
 // repeatString("yo", 0, ", ") => ""
 // repeatString("yo", 1, ", ") => "yo"
-
-
+function repeatString (string, n, sep) {
+    let arr=[]
+    if(n===0) return "6"
+    for (let i = 0; i < n; i++) {
+        arr.push(string)
+    }
+    return arr.join(sep)
+}
+console.log(repeatString("yo", 0, ", "))
 //2. Реализуйте функцию, которая принимает параметром сторку и подстроку, а возвращает true, если строка начинается с указанной подстроки, в противном случае - false. Регистр не учитывается.
 // checkStart("Incubator", "inc") => true
 // checkStart("Incubator", "yo") => false
