@@ -1,14 +1,14 @@
 // 1. Создайте функцию, которая будет принимать массив элементов и функцию обратного вызова (callback), и для каждого элемента массива
 // будет применять функцию обратного вызова(функция вывода).
-const applyCallback = (array, callback) => {
-    for (let i = 0; i < array.length; i++) {
-       console.log(array[i]);
-        
-    }
-}
-const array = [1, 2, 3];
-applyCallback(array);
-console.log('array[i]');
+// const applyCallback = (array, callback) => {
+//     for (let i = 0; i < array.length; i++) {
+//        console.log(array[i]);
+//
+//     }
+// }
+// const array = [1, 2, 3];
+// applyCallback(array);
+// console.log('array[i]');
 
 
 
@@ -99,4 +99,24 @@ console.log('array[i]');
 // const phoneNumber = (number) => {}
 // console.log(phoneNumber('123456789'))
 
- 
+// function getStatus(isBusy) {
+//     let msg = isBusy ? "busy" : "avaliable"
+//     return    {
+//         status: msg
+//     }
+// }
+//
+// console.log(getStatus(true))
+let a=1
+let s=2
+let d=3
+let f=4
+let g=4
+function sum(...nums) {
+    // console.log(nums)
+    return nums.reduce((s,el)=>s+el,0)
+
+}
+
+console.log(sum(1,2,3,5,6))
+console.log(arguments)
