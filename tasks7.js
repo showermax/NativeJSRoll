@@ -152,27 +152,50 @@ console.log(findMode(arr)); // Выведет 2
 
 //10.Задача на цикл do while: Напишите функцию, которая запрашивает у пользователя числа с клавиатуры до тех пор,
 //пока он не введет отрицательное число.
-function getNumbersFromUser() {
-    let a=0
-    do {
-        a++
-    } while (a<4)
+// function getNumbersFromUser() {
+//     let a=0
+//     do {
+//         a++
+//     } while (a<4)
+// }
+// const numbers = getNumbersFromUser();
+// console.log(numbers); // Выведет массив введенных пользователем чисел
+
+
+
+// function kebabize(str) {
+//     let arr = str.split('')
+//     let newArr = []
+//      if (!arr[0].match(/[0-9]/)) newArr.push(arr[0].toLowerCase())
+//         for (let i = 1; i < arr.length; i++) {
+//             if (arr[i].match(/[a-z]/))  newArr.push(arr[i])
+//             if (arr[i].match(/[A-Z]/))  {newArr.push('-'); newArr.push(arr[i].toLowerCase())}
+//     }
+//     return newArr.join('')
+// }
+//
+// console.log(kebabize('hvt'))
+
+
+// function kebabize(str) {
+//     let arr = str.trim().split('')
+//     let newArr = []
+//     if (arr[0].match(/[A-Z]/) || arr[0].match(/[a-z]/)) newArr.push(arr[0].toLowerCase())
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i].match(/[a-z]/))  newArr.push(arr[i])
+//         if (arr[i].match(/[A-Z]/))  {newArr.push('-'); newArr.push(arr[i].toLowerCase())}
+//     }
+//     return newArr.join('')
+// }
+function kebabize(str) {
+    let str1=str.trim().replace(/[0-9]/g, '')
+    return (str1.length<2)
+        ? str1.toLowerCase()
+        : str1.slice(0,1).
+    toLowerCase()+str1.slice(1,str1.length).split('').map(el=> el === el.
+    toUpperCase() ? `-${el.toLowerCase()}` : el).join ('')
 }
-const numbers = getNumbersFromUser();
-console.log(numbers); // Выведет массив введенных пользователем чисел
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(kebabize('4NH'))
 
 
 
