@@ -163,7 +163,7 @@
 // console.log(names)
 
 // метод sort - единственный способо сортировки массивов в js сортирует по юникоду(таблица)
-const names = ["Donald", "Alex", "Bob"]
+const names = ["Donald", "Alex", "Bobby"]
 console.log(names.sort())
 
 const names_2 = ["Donald", "ALex", "aLEX", "игорь", "Юрий"]

@@ -11,3 +11,6 @@ const car = {
 }
 car.showColor() // this ссылка на то, что слева от вызова функции (т.е. car)
 
+// initial try question dress nation wear raise tone spread plunge sun shoulder
+console.log(this)
+this.name='the name of the page'
