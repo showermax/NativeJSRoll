@@ -1,7 +1,7 @@
 // замыкание, лексическое окружение, рекурсия
 
 // globalLE {startEngine: Function}  >>>> null
-
+//
 // const car = 'bmw' // globalLE {startEngine: Function, car:'bmw'}
 //
 // function startEngine() {
@@ -41,7 +41,16 @@
 // }
 // console.log(fact(6))
 
-let i = 0
-while (true) {
-    console.log(i++)
+// let i = 0
+// while (true) {
+//     console.log(i++)
+// }
+
+
+const progresAr = (start, step, length) =>{
+    if (length > 1)  return progresAr(start+step,step,length-1) + start
+    else return start
 }
+
+console.log(progresAr(1,1,7))
+console.log(1+2+3+4+5+6+7)
