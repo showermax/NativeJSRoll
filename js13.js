@@ -14,3 +14,19 @@ const Person = {
 }
 
 Person.getAge.bind(Dan).bind(Max)
+
+function User (name, sex) {
+    this.name = name
+    this.sex = sex
+    // this.getUser = function () {
+    //     console.log(`The name of the user is ${this.name} the sex is ${this.sex}`)
+    // }
+}
+
+User.prototype.getUser = function () {
+    console.log(`The name of the user is ${this.name} the sex is ${this.sex}`)
+}
+
+const max = new User('Max', 'male')
+max.getUser()
+console.log(max)
