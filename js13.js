@@ -35,6 +35,7 @@ class Shop {
     constructor (address,cat) {
         this.address = address
         this.category = cat
+        this.rate = 0
     }
     getShop () {
         console.log(`The shop on ${this.address} is ${this.category} with rate ${this.rate}`)
@@ -44,3 +45,7 @@ class Shop {
     }
 }
 
+const tomato = new Shop('Gromova 26','groceries ')
+tomato.getShop()
+tomato.rateShop(3)
+tomato.getShop()
