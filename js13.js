@@ -30,3 +30,17 @@ User.prototype.getUser = function () {
 const max = new User('Max', 'male')
 max.getUser()
 console.log(max)
+
+class Shop {
+    constructor (address,cat) {
+        this.address = address
+        this.category = cat
+    }
+    getShop () {
+        console.log(`The shop on ${this.address} is ${this.category} with rate ${this.rate}`)
+    }
+    rateShop (rate) {
+        this.rate = rate
+    }
+}
+
