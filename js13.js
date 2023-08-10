@@ -32,6 +32,10 @@ max.getUser()
 console.log(max)
 
 class Shop {
+    #address
+    #category
+    #rate
+
     constructor (address,cat) {
         this.address = address
         this.category = cat
@@ -43,6 +47,7 @@ class Shop {
     rateShop (rate) {
         this.rate = rate
     }
+
 }
 
 const tomato = new Shop('Gromova 26','groceries ')
