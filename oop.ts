@@ -47,3 +47,9 @@ class Good {
 
 const Philips = new Good(500,'Philips255', 'Monitors', 'LED 24\'' )
 console.log(Philips)
+
+class DiscountGood extends Good {
+    constructor(name, discount) {
+        super(name);
+    }
+}

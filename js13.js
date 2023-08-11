@@ -35,7 +35,6 @@ class Shop {
     #address
     #category
     #rate
-
     constructor (address,cat) {
         this.address = address
         this.category = cat
@@ -54,3 +53,13 @@ const tomato = new Shop('Gromova 26','groceries ')
 tomato.getShop()
 tomato.rateShop(3)
 tomato.getShop()
+
+class SmallShop extends Shop {
+    constructor(address,isSmall) {
+        super(address);
+        this.isSmall = isSmall
+    }
+}
+const firstSmallShop = new SmallShop('fed 5', true)
+
+console.log(firstSmallShop)
